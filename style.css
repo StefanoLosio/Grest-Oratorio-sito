@@ -12,19 +12,28 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
+#nav-bar.open {
+    height: 300px;
+}
+
+#nav-bar.open #sezioni {
+    display: flex;
+}
+
 .floating {
     top: 20px;
     left: 5%;
     width: 90%;
     height: 120px;
     border-radius: 15px;
-    gap:50px;
+    gap:40px;
 }
 .fix {
     top: 0px;
     left: 0px;
     width: 100%;
     height: 120px;
+    border-radius: 0px;
 }
 
 #titolo {
@@ -32,21 +41,29 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    font-size: 1.7rem;
+    align-items: center;   
+}
+#testo {
+    font-size: 1.5rem;
+    min-width: 300px;
 }
 
 .search {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     border-radius: 5px;
     background-color: white;
     border: solid grey 1px;
+    padding: 5px;
 }
 .search input {
     border: none;
+    outline: none;
+    height: 100%;
+    font-size: 1.15rem;
+    width: 80%;
 }
 
 #large-screen {
@@ -56,6 +73,17 @@
 }
 #small-screen {
     display: none;
+}
+
+#show {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+#show:hover {
+    cursor: pointer;
 }
 
 nav {
@@ -81,7 +109,13 @@ nav #container {
     padding-right: 20px;
     gap: 10px;
     align-items: center;
+    border-radius: 10px;
 }
+.div-link:hover {
+    cursor: pointer;
+    background-color: rgba(213, 213, 213, 0.918);
+}
+
 .current-page {
     color: blue;
 }
@@ -93,6 +127,55 @@ nav button {
     color: white;
     background-color: blue;
     border: none;
-    border-radius: 5px;
-    font-size: 1.25rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+nav button:hover {
+    cursor: pointer;
+}
+
+
+/*--------RESPONSIVE-----------*/
+@media (max-width: 880px) {
+    #large-screen {
+        display: none;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        border-top: solid grey 1px;
+        height: 70%;
+    }
+    nav #container {
+        flex-direction: column;
+        align-items: initial;
+        width: 100%;
+    }
+    #small-screen {
+        display: flex;
+    }
+    #show {
+        display: flex;
+    }
+} /* smartphone */
+@media (min-width: 881px) {
+    nav {
+        flex-direction: row;
+        border: none;
+        height: 40%;
+    }
+    nav #container {
+        flex-direction: row;
+        align-items: center;
+        width: 40%;
+    }
+    #show {
+        display: none;
+    }
+    #nav-bar{
+        height: 120px;
+    }
+    #sezioni {
+        display: flex;
+    }
 }

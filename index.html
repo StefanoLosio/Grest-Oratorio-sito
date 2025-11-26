@@ -3,17 +3,26 @@
     <head>
         <title>Parrocchia Villaggio Sereno</title>
         <link rel="stylesheet" href="style.css">
+        <script src="navBar.js" defer></script>
     </head>
     <body>
         <div id="nav-bar" class="floating">
-            <div id="titolo">Parrocchia Villaggio Sereno
+            <div id="titolo">
+                <div id="testo">Parrocchia Villaggio Sereno</div>
                 <div class="search" id="large-screen">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-hidden="true">
                         <path d="m21 21-4.34-4.34"></path>
                         <circle cx="11" cy="11" r="8"></circle>
                     </svg> 
-                    <input type="search" placeholder="Cerca nel sito...">
+                    <input type="text" placeholder="Cerca nel sito...">
                 </div>
+                <button id="show">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6 text-gray-700" aria-hidden="true">
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h16"></path>
+                    </svg>
+                </button>
             </div>
             <nav id="sezioni">
                 <div id="container">
