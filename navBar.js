@@ -5,7 +5,7 @@ const home_link = document.getElementById('home');
 const eventi_link = document.getElementById('eventi');
 const grest_link = document.getElementById('grest');
 const iscrizioni_link = document.getElementById('iscrizioni');
-const areaPersonale_link = document.getElementById('iscrizioni');
+const areaPersonale_link = document.getElementById('area-personale');
 
 button_show.addEventListener('click', () => {
     nav_bar.classList.toggle('open');
