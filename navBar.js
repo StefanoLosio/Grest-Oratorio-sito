@@ -7,6 +7,8 @@ const grest_link = document.getElementById('grest');
 const iscrizioni_link = document.getElementById('iscrizioni');
 const areaPersonale_link = document.getElementById('area-personale');
 
+let lastScroll = 0;
+
 button_show.addEventListener('click', () => {
     nav_bar.classList.toggle('open');
 });
@@ -14,7 +16,7 @@ button_show.addEventListener('click', () => {
 window.addEventListener('resize', function() {
     const width = window.innerWidth;
 
-    if (width > 880) {
+    if (width >= 971) {
         nav_bar.classList.remove('open');
     }
 });
@@ -33,4 +35,16 @@ iscrizioni_link.addEventListener('click', function(){
 });
 areaPersonale_link.addEventListener('click', function(){
     window.location.href = "login.html"
+});
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > 100) {
+    nav_bar.classList.add('fix');
+    nav_bar.classList.remove('floating');
+  } else {
+    nav_bar.classList.add('floating');
+    nav_bar.classList.remove('fix');
+  }
 });

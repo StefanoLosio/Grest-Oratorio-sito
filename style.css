@@ -1,5 +1,7 @@
 body {
-  font-family: "Varela Round", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Varela Round", sans-serif;
 }
 
 #nav-bar {
@@ -14,6 +16,8 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+    transition: all 0.3s ease;
 }
 
 #nav-bar.open {
@@ -38,6 +42,7 @@ body {
     width: 100%;
     height: 120px;
     border-radius: 0px;
+    gap:40px;
 }
 
 #titolo {
@@ -50,6 +55,7 @@ body {
 #testo {
     font-size: 1.5rem;
     min-width: 300px;
+    flex-shrink: 0;
 }
 
 .search {
@@ -72,7 +78,7 @@ body {
 
 #large-screen {
     display: flex;
-    width: 450px;
+    min-width: 400px;
     height: 30px;
 }
 #small-screen {
@@ -140,7 +146,7 @@ nav button:hover {
 
 
 /*--------RESPONSIVE-----------*/
-@media (max-width: 880px) {
+@media (max-width: 970px) {
     #large-screen {
         display: none;
     }
@@ -162,7 +168,7 @@ nav button:hover {
         display: flex;
     }
 } /* smartphone */
-@media (min-width: 881px) {
+@media (min-width: 971px) {
     nav {
         flex-direction: row;
         border: none;
@@ -183,3 +189,12 @@ nav button:hover {
         display: flex;
     }
 }
+
+/*---------------------------------- section riempimento --------------------------------------------*/
+#riempimento{
+    width: 100%;
+    height: 125px;
+
+}
+
+/*---------------------------------- section scroll-info --------------------------------------------*/
