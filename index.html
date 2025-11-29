@@ -4,6 +4,7 @@
         <title>Parrocchia Villaggio Sereno</title>
         <link rel="stylesheet" href="style.css">
         <script src="navBar.js" defer></script>
+        <script src="slider.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
     </head>
@@ -65,7 +66,15 @@
         </div>
     </body>
     <section id="riempimento"></section>
-    <section id="scroll-info"></section>
+    <section id="scroll-info">
+        <button id="prec" onclick="precedente()"><</button>
+        <div id="img">
+            <img src="images/immagine1.jpeg">
+            <img src="images/immagine2.jpeg">
+            <img src="images/immagine3.jpeg">
+        </div>
+        <button id="succ" onclick="successiva()">></button>
+    </section>
     <section id="proposte"></section>
     <section id="orari"></section>
     <section id="footer"></section>
