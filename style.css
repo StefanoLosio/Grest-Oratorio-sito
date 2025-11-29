@@ -18,6 +18,8 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 
     transition: all 0.3s ease;
+
+    z-index: 1000;
 }
 
 #nav-bar.open {
@@ -194,7 +196,6 @@ nav button:hover {
 #riempimento{
     width: 100%;
     height: 125px;
-
 }
 
 /*---------------------------------- section scroll-info --------------------------------------------*/
@@ -206,6 +207,7 @@ nav button:hover {
     justify-content: center;
     overflow: hidden;
     gap: 5px;
+    position: relative;
 }
 
 #scroll-info button {
@@ -219,6 +221,20 @@ nav button:hover {
     outline: none;
     transition: all 0.1s ease-in-out;
     z-index: 100;
+
+    position: absolute;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+#prec {
+    left: 50px;
+}
+#succ {
+    right: 50px;
 }
 #scroll-info button:hover {
     transform: scale(1.05);
@@ -229,12 +245,47 @@ nav button:hover {
 
 #img {
     width: 100%;
+    z-index: 10;
 }
 #img img {
     width: 100%;
     display: none;
+    filter: brightness(50%);
 }
 
 #img img:nth-child(1) {
     display: block;
+}
+
+#pallini {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+    position: absolute;
+    justify-content: space-between;
+    bottom: 50px;
+}
+.pallino {
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    transition: all 0.1s ease-in-out;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.pallino:nth-child(1) {
+    width: 40px;
+    background-color: white;
+}
+
+
+#proposte{
+    width: 100%;
+    height: 405px;
 }

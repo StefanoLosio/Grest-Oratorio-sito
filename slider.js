@@ -10,9 +10,13 @@ function successiva() {
     for(let i=1; i<=numImg; i++){
         if(i!=imgCorrente) {
             document.querySelector("#img img:nth-child(" + i +")").style.display = "none";
+            document.querySelector(".pallino:nth-child("+i+")").style.width = "15px";
+            document.querySelector(".pallino:nth-child("+i+")").style.backgroundColor = "rgba(255, 255, 255, 0.12)";
         }
         else {
             document.querySelector("#img img:nth-child(" + i +")").style.display = "block";
+            document.querySelector(".pallino:nth-child("+i+")").style.width = "40px";
+            document.querySelector(".pallino:nth-child("+i+")").style.backgroundColor = "white";
         }
     }
     clearInterval(intervalID);
@@ -27,9 +31,13 @@ function precedente() {
     for(let i=1; i<=numImg; i++){
         if(i!=imgCorrente) {
             document.querySelector("#img img:nth-child(" + i +")").style.display = "none";
+            document.querySelector(".pallino:nth-child("+i+")").style.width = "15px";
+            document.querySelector(".pallino:nth-child("+i+")").style.backgroundColor = "rgba(255, 255, 255, 0.12)";
         }
         else {
             document.querySelector("#img img:nth-child(" + i +")").style.display = "block";
+            document.querySelector(".pallino:nth-child("+i+")").style.width = "40px";
+            document.querySelector(".pallino:nth-child("+i+")").style.backgroundColor = "white";
         }
     }
     clearInterval(intervalID);
